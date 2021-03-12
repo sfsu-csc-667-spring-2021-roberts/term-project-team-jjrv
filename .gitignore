@@ -1,0 +1,2 @@
+#removes my environment variables from the database
+.env
