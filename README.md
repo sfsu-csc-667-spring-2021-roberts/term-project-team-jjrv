@@ -4,7 +4,7 @@
 
 | Student Name | Student Email | GitHub Username |
 |    :---:     |     :---:     |     :---:       |
-| member1      |   Jair Gonzalez            |   Jair Gonzalez             |
+| member1      |   Jair Gonzalez            |   jairgonzalez            |
 | member2      |       Jessica Serrano         |   jserrano5            |
 | member3      |        Rodrigo Gallardo     |          rgallardo02       |
 | member4      |       Vern Saeteurn         |          vdiz510       |
