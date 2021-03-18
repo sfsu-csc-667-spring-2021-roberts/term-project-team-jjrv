@@ -1,2 +1,4 @@
 #removes my environment variables from the database
 .env
+.DS_Store
+.vscode/
