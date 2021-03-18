@@ -2,9 +2,9 @@
 
 # Game: Texas Hold'em
 
-| Member | Student name | GitHub Username |
+| Student Name | Student Email | GitHub Username |
 |    :---:     |     :---:     |     :---:       |
-| Member 1      |   Jair Gonzalez            |   jairgonzalez            |
-| Member 2      |       Jessica Serrano         |   jserrano5            |
-| Member 3      |        Rodrigo Gallardo     |          rgallardo02       |
-| Member 4      |       Vern Saeteurn         |          vdiz510       |
+| member1      |   Jair Gonzalez            |   jairgonzalez            |
+| member2      |       Jessica Serrano         |   jserrano5            |
+| member3      |        Rodrigo Gallardo     |          rgallardo02       |
+| member4      |       Vern Saeteurn         |          vdiz510       |
