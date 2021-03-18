@@ -3,14 +3,12 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
 if(process.env.NODE_ENV === 'development') {
   require("dotenv").config();
 }
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var testRouter = require('./routes/tests');
-// var homerouter = require('/routes/home');
 
 var app = express();
 
@@ -27,7 +25,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/test', testRouter);
-// app.use('/home', homerouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
