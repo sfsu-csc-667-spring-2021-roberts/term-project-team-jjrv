@@ -39,6 +39,10 @@ module.exports = {
         primaryKey: true,
 
       },
+      username: {
+        type: DataTypes.STRING(30),
+        allowNull: false,
+      },
       first_name: {
         type: DataTypes.STRING(100),
         allowNull: false,
