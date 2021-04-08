@@ -1,4 +1,36 @@
-extends layout
+//- extends layout
 
-block content 
-  h2 hello this is the registration page. 
+doctype html
+html
+  head
+    title Register
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous')
+
+  //- head 
+  //-   title Register
+
+  block content 
+    h1.m-5.text-center Register
+    hr
+    .p-4.container.col-7
+      form#registerForm(action='#' method='POST' enctype='application/x-www-form-urlencoded')
+        .form-group
+          label(for='firstname') First Name
+          input#firstname.form-control(type='text' name='firstname' placeholder='First name')
+        .form-group
+          label(for='lastname') Last Name
+          input#lastname.form-control(type='text' name='lastname' placeholder='Last name')
+        .form-group
+          label(for='email') Email address
+          input#email.form-control(type='email' name='email' placeholder='Email')
+        .form-group
+          label(for='password') Password
+          input#password.form-control(type='password' name='password' placeholder='Password')
+        button#button.btn.btn-secondary(type='submit') Register
+      p.pt-3.text-center
+        | Already have an account? 
+        a(href='#') Login
