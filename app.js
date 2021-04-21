@@ -3,9 +3,12 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+// connection to db
 if(process.env.NODE_ENV === 'development') {
   require("dotenv").config();
 }
+// routes
+var usertestRouter = require('./routes/testuser');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var testRouter = require('./routes/tests');
@@ -29,6 +32,7 @@ app.use('/users', usersRouter);
 app.use('/test', testRouter);
 app.use('/login', loginRouter);
 app.use('/register', registerRouter);
+app.use('/testuser', usertestRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

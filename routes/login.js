@@ -1,9 +1,20 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.render('login.pug',{ title: 'Login' });
+router.get("/", function (request, response, next) {
+  response.render("login.pug");
 });
+
+/*
+router.post(
+  "/login",
+  passport.authenticate("local", {
+    successRedirect: "/lobby",
+    failureRedirect: "/login",
+    failureFlash: true,
+  })
+);
+*/
 
 module.exports = router;
