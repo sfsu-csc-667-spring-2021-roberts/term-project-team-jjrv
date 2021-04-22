@@ -1,0 +1,7 @@
+extends layout
+block content
+    div.text-center
+        #error
+          if errors
+            p.text-danger #{errors}
+            p #{message}
