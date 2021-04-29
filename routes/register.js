@@ -11,7 +11,6 @@ router.get("/", function (request, response, next) {
 
 router.post("/", (request, response, next) => {
   const { username, first_name, last_name, password, password2 } = request.body;
-
   const errors = [];
   if (!username || !first_name || !last_name || !password || !password2) {
     errors.push(["Please enter all fields"]);
