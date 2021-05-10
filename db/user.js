@@ -1,7 +1,7 @@
 const db = require('./connection');
       
-const findById = (id) => {
-  return db.one('SELECT id, username, firstname, lastname FROM users WHERE id=$1', [id]);
+const findById = (user_id) => {
+  return db.any('SELECT user_id, username, first_name, last_name FROM users WHERE user_id=$1', [user_id]);
 };
 
 const findByusername = (username) => {
@@ -19,4 +19,3 @@ const create = (username, first_name, last_name, password) => {
 
 
 module.exports = { findById, findByusername, create } ; 
-

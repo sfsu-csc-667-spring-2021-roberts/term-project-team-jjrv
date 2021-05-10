@@ -1,15 +1,36 @@
 var express = require("express");
 var router = express.Router();
 const bcrypt = require("bcrypt");
-const Users = require("../db").Users;
-const passport = require('../auth/auth');
+const Users = require("../../db").Users;
+const passport = require("../../auth/auth");
+const app = require("../../app");
 
+router.get("/messages", (request, response) => {
+  response.render("message.pug");
+});
 
-router.get("/", function (request, response, next) {
+router.get("/logout", (request, response) => {
+  request.logout();
+  response.redirect("/");
+});
+router.get("/login", function (request, response, next) {
+  response.render("login.pug");
+});
+
+router.post(
+  "/login",
+  passport.authenticate("local", {
+    successRedirect: "/auth/lobby",
+    failureRedirect: "/login",
+    failureFlash: true,
+  })
+);
+
+router.get("/register", function (request, response, next) {
   response.render("register.pug");
 });
 
-router.post("/", (request, response, next) => {
+router.post("/register", (request, response, next) => {
   const { username, first_name, last_name, password, password2 } = request.body;
   const errors = [];
   if (!username || !first_name || !last_name || !password || !password2) {
@@ -25,7 +46,7 @@ router.post("/", (request, response, next) => {
     bcrypt.hash(password, 10).then((hashedPassword) =>
       Users.create(username, first_name, last_name, hashedPassword)
         .then((_) => {
-            response.redirect("/login");
+          response.redirect("/login");
         })
         .catch((_) =>
           response.render("register", {
@@ -35,5 +56,7 @@ router.post("/", (request, response, next) => {
     );
   }
 });
+
+
 
 module.exports = router;

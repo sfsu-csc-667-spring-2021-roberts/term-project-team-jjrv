@@ -23,18 +23,22 @@ const authenticateUser = (username, password, done) => {
 
 passport.use(new LocalStrategy({ usernameField: 'username' }, authenticateUser));
 
-passport.serializeUser(function(user, done) {
-  done(null, user);
+passport.serializeUser(( user, done) => {
+  console.log("this is inside passport.serializeuser", user);
+  return done(null, user.user_id);
 });
 
 
-passport.deserializeUser((id, done) => {
-  Users.findById(id)
+
+passport.deserializeUser((user_id, done) => {
+  Users.findById(user_id)
     .then((user) => {
-      console.log(user);
-      return user;
+      console.log("deserialized user", user_id);
+      return done(null, user[0]);
     })
-    .then((user) => done(null, user));
+    .catch((error) => {
+      return done(error, null);
+    });
 });
 
 module.exports = passport;
