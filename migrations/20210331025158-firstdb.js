@@ -135,6 +135,7 @@ module.exports = {
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
+        autoIncrement: true
 
       },
       current: {
