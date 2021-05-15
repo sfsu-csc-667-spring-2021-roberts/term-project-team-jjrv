@@ -1,18 +1,21 @@
-import db from '../db/connection'
+const db = require('./connection');
+      
+const findById = (user_id) => {
+  return db.any('SELECT user_id, username, first_name, last_name FROM users WHERE user_id=$1', [user_id]);
+};
 
-class ActiveRecord{
+const findByusername = (username) => {
+  return db.one('SELECT * FROM users WHERE username=$1', [username]);
+};
+
+const create = (username, first_name, last_name, password) => {
+    return db.one('INSERT INTO users (username, first_name, last_name, password) VALUES ($1, $2, $3, $4) RETURNING user_id, username, first_name, last_name', [
+      username,
+      first_name,
+      last_name,
+      password
+    ]);
+  };
 
 
-}
-
- class user extends ActiveRecord{
-     static all(){
-         return db.any("SELECT * FROM user");
-     }
-    static find(id){
-         return db.oneOrNone('SELECT * FROM user where id=$1', [id]);
-     }
-     static create(fields){
-         return db.none('INSERT INTO user')
-     }
-}
+module.exports = { findById, findByusername, create } ; 

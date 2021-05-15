@@ -1,5 +1,3 @@
-//- extends layout
-
 doctype html
 html
   head
@@ -12,25 +10,28 @@ html
 
   //- head 
   //-   title Register
-
   block content 
-    h1.m-5.text-center Register
-    hr
-    .p-4.container.col-7
-      form#registerForm(action='#' method='POST' enctype='application/x-www-form-urlencoded')
-        .form-group
-          label(for='firstname') First Name
-          input#firstname.form-control(type='text' name='firstname' placeholder='First name')
-        .form-group
-          label(for='lastname') Last Name
-          input#lastname.form-control(type='text' name='lastname' placeholder='Last name')
-        .form-group
-          label(for='email') Email address
-          input#email.form-control(type='email' name='email' placeholder='Email')
-        .form-group
-          label(for='password') Password
-          input#password.form-control(type='password' name='password' placeholder='Password')
-        button#button.btn.btn-secondary(type='submit') Register
-      p.pt-3.text-center
-        | Already have an account? 
-        a(href='#') Login
+    div.text-center
+        #error
+          if errors
+            p.text-danger #{errors}
+
+        form(class="form-signin" method="POST" action="/register")
+            h1(class="h3 mb-3 font-weight-normal") Please sign up to play
+
+            label( for="username" class="sr-only") user name
+            input(type="text" name="username" id="username" class="form-control" placeholder="username" )
+
+            label( for="first_name" class="sr-only") first name
+            input(type="first_name" name="first_name" id="first_name" class="form-control" placeholder="firstname" )
+
+            label( for="last_name" class="sr-only") first name
+            input(type="last_name" name="last_name" id="last_name" class="form-control" placeholder="lastname" )
+
+            label(for="password" class="sr-only") Password
+            input(type="password" name="password" id="password" class="form-control" placeholder="Password" )
+
+            label(for="Password2" class="sr-only") Confirm Password
+            input(type="password" name="password2" id="Password2" class="form-control" placeholder="Confirm Password" )
+
+            button(class="btn btn-lg btn-primary btn-block" type="submit") Register

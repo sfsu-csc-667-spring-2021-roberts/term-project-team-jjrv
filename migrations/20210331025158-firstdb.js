@@ -42,6 +42,7 @@ module.exports = {
       username: {
         type: DataTypes.STRING(30),
         allowNull: false,
+        unique: true,
       },
       first_name: {
         type: DataTypes.STRING(100),
@@ -52,7 +53,7 @@ module.exports = {
         allowNull: false,
       },
       password: {
-        type: DataTypes.STRING(30),
+        type: DataTypes.STRING(500),
         allowNull: false,
       },
       created_at: {
@@ -134,6 +135,7 @@ module.exports = {
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
+        autoIncrement: true
 
       },
       current: {
