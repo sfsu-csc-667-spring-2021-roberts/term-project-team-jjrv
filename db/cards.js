@@ -42,6 +42,9 @@ function shuffleDeck(deck) {
 }
 
 const cardsSetup = (card_id, rank, suite) => {
+    // reset cards table
+    db.one('DELETE FROM cards');
+
     var cardsDeck = createDeck();
     shuffleDeck(cardsDeck);
 
