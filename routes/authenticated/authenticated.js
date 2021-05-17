@@ -1,19 +1,41 @@
 var express = require("express");
 var router = express.Router();
-//user gets logged out 
-router.get('/logout', (request, response) => {
-    request.logout();
-    response.redirect('/');
-  });
+const Pusher = require("pusher");
+const moment = require('moment');
 
-// user's get in lobbys 
-router.get("/lobby", (request, response, next) => {  
-    if (request.user){
-      response.render('about.pug', { username: request.user.username });  
-    }
-     {
-      redirect('/login');
-    }   
-  
+const pusher = new Pusher({
+  appId: process.env.PUSHER_APP_ID,
+  key: process.env.PUSHER_APP_KEY,
+  secret: process.env.PUSHER_APP_SECRET,
+  cluster: process.env.PUSHER_APP_CLUSTER,
+  useTLS: true,
+});
+
+//user gets logged out
+router.get("/logout", (request, response) => {
+  request.logout();
+  response.redirect("/");
+});
+
+// user's get in lobbys
+router.get("/lobby", (request, response, next) => {
+  if (request.user) {
+    response.render("lobby.pug", { username: request.user.username });
+  } else {
+    response.redirect("/");
+  }
+
+  router.post("/chatMessage", (req, res) => {
+    let username = req.user.username;
+    let { msg } = req.body;
+
+    pusher.trigger("lobby", "chat-msg", {
+      message: msg,
+      username: username,
+      timestamp: moment().format("h:mm a"),
+    });
+
+    res.status(200).json({ msg: "test  pusher" });
   });
-  module.exports = router;
+});
+module.exports = router;
