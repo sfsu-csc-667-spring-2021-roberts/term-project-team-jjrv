@@ -11,4 +11,4 @@ const findallgames = (_) => {
   return db.one("SELECT game_id, users_in_game FROM game_users");
 };
 
-module.exports = { creategame, findallgamess`};
+module.exports = { creategame, findallgames};
