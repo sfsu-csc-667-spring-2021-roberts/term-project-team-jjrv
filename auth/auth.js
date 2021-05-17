@@ -24,7 +24,6 @@ const authenticateUser = (username, password, done) => {
 passport.use(new LocalStrategy({ usernameField: 'username' }, authenticateUser));
 
 passport.serializeUser(( user, done) => {
-  console.log("this is inside passport.serializeuser", user);
   return done(null, user.user_id);
 });
 

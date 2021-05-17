@@ -14,7 +14,11 @@ router.get("/logout", (request, response) => {
   response.redirect("/");
 });
 router.get("/login", function (request, response, next) {
-  response.render("login.pug");
+  if (request.user) {
+    response.redirect("/auth/lobby");
+  } else {
+    response.render("login.pug");
+  }
 });
 
 router.post(
@@ -56,7 +60,5 @@ router.post("/register", (request, response, next) => {
     );
   }
 });
-
-
 
 module.exports = router;
