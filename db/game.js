@@ -8,7 +8,7 @@ const creategame = (order, current, users_in_game) => {
 };
 
 const findallgames = (_) => {
-  return db.one("SELECT game_id, users_in_game FROM game_users");
+  return db.any("SELECT * FROM game_users");
 };
 
 module.exports = { creategame, findallgames};

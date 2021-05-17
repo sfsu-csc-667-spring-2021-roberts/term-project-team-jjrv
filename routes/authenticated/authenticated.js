@@ -2,6 +2,7 @@ var express = require("express");
 var router = express.Router();
 const Pusher = require("pusher");
 const moment = require('moment');
+const Games = require('../../db').Games;
 
 const pusher = new Pusher({
   appId: process.env.PUSHER_APP_ID,
@@ -39,3 +40,9 @@ router.get("/lobby", (request, response, next) => {
   });
 });
 module.exports = router;
+
+
+router.get('/creategame', (request, response) =>{
+   Games.creategame('slander', "slander,", "slander");
+
+});

@@ -8,13 +8,13 @@ block content
     form(action='/logout' method='GET') 
         input(type='submit' name='logout' value='Logout')
         div(id='chat-box')
-
+    // chat 
     form(id='chat-form')
         label(for='chatTextInput') Message:
         input(type='text' name='chatTextInput' id='msg' 
         placeholder='type message')
         input(type='submit' style='display: none')
 
-        // ======== Imported Libraries ==========
+        
         script(src='https://js.pusher.com/7.0/pusher.min.js')
         script(type='module' src='/js/lobby.js')

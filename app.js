@@ -6,7 +6,7 @@ var logger = require("morgan");
 var flash = require("express-flash");
 const session = require("express-session");
 const Pusher = require("pusher");
-const isAuthenticated = require("./auth/authcheck");
+
 // connection to db
 if (process.env.NODE_ENV === "development") {
   require("dotenv").config();
@@ -37,7 +37,7 @@ app.use(
 
 app.use(
   session({
-    secret: "keyboard cat",
+    secret: "Random Woof",
     resave: false,
     saveUninitialized: true,
   })
@@ -60,7 +60,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-//app.use('/dev', isAuthenticated, devRouter);
 
 app.use("/", indexRouter, unauthenticatedRouter);
 app.use("/test", testRouter);

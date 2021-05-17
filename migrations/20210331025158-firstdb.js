@@ -143,8 +143,13 @@ module.exports = {
         allowNull: false
       },
       users_in_game: {
+        autoIncrement: true,
         type: DataTypes.INTEGER,
         allowNull: true,
+      }, 
+      usersnames: {
+        type: DataTypes.STRING(50),
+        allowNull: false,
       }
     });
 

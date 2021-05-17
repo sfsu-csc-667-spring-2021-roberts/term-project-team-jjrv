@@ -3,7 +3,6 @@ var router = express.Router();
 const bcrypt = require("bcrypt");
 const Users = require("../../db").Users;
 const passport = require("../../auth/auth");
-const app = require("../../app");
 
 router.get("/messages", (request, response) => {
   response.render("message.pug");
