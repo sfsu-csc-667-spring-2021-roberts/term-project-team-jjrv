@@ -1,3 +1,23 @@
 doctype html
+html
+  head
+    title How to Play
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous')
 
-h2 How To Play
+  //- head 
+  //-   title Register
+  block content 
+    .p-4.container.col-7
+      #error
+        if errors
+          p.text-danger #{errors}
+
+      h1.m-5.text-center How to Play
+      hr
+
+      p.text-center
+        | Lorem ipsum 

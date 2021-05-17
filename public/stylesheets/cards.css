@@ -1,0 +1,171 @@
+.card {
+    height: 90px;
+    width: 66px;
+  }
+  
+  .facedown {
+    background-image: url('../images/Back.jpg');
+  }
+  
+  .clubs-2 {
+    background-image: url('../images/Clubs\ 2.JPG');
+  }
+  .clubs-3 {
+    background-image: url('../images/Clubs\ 3.JPG');
+  }
+  .clubs-4 {
+    background-image: url('../images/Clubs\ 4.JPG');
+  }
+  .clubs-5 {
+    background-image: url('../images/Clubs\ 5.JPG');
+  }
+  .clubs-6 {
+    background-image: url('../images/Clubs\ 6.JPG');
+  }
+  .clubs-7 {
+    background-image: url('../images/Clubs\ 7.JPG');
+  }
+  .clubs-8 {
+    background-image: url('../images/Clubs\ 8.JPG');
+  }
+  .clubs-9 {
+    background-image: url('../images/Clubs\ 9.JPG');
+  }
+  .clubs-10 {
+    background-image: url('../images/Clubs\ 10.JPG');
+  }
+  .clubs-j {
+    background-image: url('../images/Clubs\ J.JPG');
+  }
+  .clubs-q {
+    background-image: url('../images/Clubs\ Q.JPG');
+  }
+  .clubs-k {
+    background-image: url('../images/Clubs\ K.JPG');
+  }
+  .clubs-a {
+    background-image: url('../images/Clubs\ A.JPG');
+  }
+  
+  
+  .diamonds-2 {
+    background-image: url('../images/Diamonds\ 2.JPG');
+  }
+  .diamonds-3 {
+    background-image: url('../images/Diamonds\ 3.JPG');
+  }
+  .diamonds-4 {
+    background-image: url('../images/Diamonds\ 4.JPG');
+  }
+  .diamonds-5 {
+    background-image: url('../images/Diamonds\ 5.JPG');
+  }
+  .diamonds-6 {
+    background-image: url('../images/Diamonds\ 6.JPG');
+  }
+  .diamonds-7 {
+    background-image: url('../images/Diamonds\ 7.JPG');
+  }
+  .diamonds-8 {
+    background-image: url('../images/Diamonds\ 8.JPG');
+  }
+  .diamonds-9 {
+    background-image: url('../images/Diamonds\ 9.JPG');
+  }
+  .diamonds-10 {
+    background-image: url('../images/Diamonds\ 10.JPG');
+  }
+  .diamonds-j {
+    background-image: url('../images/Diamonds\ J.JPG');
+  }
+  .diamonds-q {
+    background-image: url('../images/Diamonds\ Q.JPG');
+  }
+  .diamonds-k {
+    background-image: url('../images/Diamonds\ K.JPG');
+  }
+  .diamonds-a {
+    background-image: url('../images/Diamonds\ A.JPG');
+  }
+  
+  
+  .hearts-2 {
+    background-image: url('../images/Hearts\ 2.JPG');
+  }
+  .hearts-3 {
+    background-image: url('../images/Hearts\ 3.JPG');
+  }
+  .hearts-4 {
+    background-image: url('../images/Hearts\ 4.JPG');
+  }
+  .hearts-5 {
+    background-image: url('../images/Hearts\ 5.JPG');
+  }
+  .hearts-6 {
+    background-image: url('../images/Hearts\ 6.JPG');
+  }
+  .hearts-7 {
+    background-image: url('../images/Hearts\ 7.JPG');
+  }
+  .hearts-8 {
+    background-image: url('../images/Hearts\ 8.JPG');
+  }
+  .hearts-9 {
+    background-image: url('../images/Hearts\ 9.JPG');
+  }
+  .hearts-10 {
+    background-image: url('../images/Hearts\ 10.JPG');
+  }
+  .hearts-j {
+    background-image: url('../images/Hearts\ J.JPG');
+  }
+  .hearts-q {
+    background-image: url('../images/Hearts\ Q.JPG');
+  }
+  .hearts-k {
+    background-image: url('../images/Hearts\ K.JPG');
+  }
+  .hearts-a {
+    background-image: url('../images/Hearts\ A.JPG');
+  }
+  
+  
+  .spades-2 {
+    background-image: url('../images/Spades\ 2.JPG');
+  }
+  .spades-3 {
+    background-image: url('../images/Spades\ 3.JPG');
+  }
+  .spades-4 {
+    background-image: url('../images/Spades\ 4.JPG');
+  }
+  .spades-5 {
+    background-image: url('../images/Spades\ 5.JPG');
+  }
+  .spades-6 {
+    background-image: url('../images/Spades\ 6.JPG');
+  }
+  .spades-7 {
+    background-image: url('../images/Spades\ 7.JPG');
+  }
+  .spades-8 {
+    background-image: url('../images/Spades\ 8.JPG');
+  }
+  .spades-9 {
+    background-image: url('../images/Spades\ 9.JPG');
+  }
+  .spades-10 {
+    background-image: url('../images/Spades\ 10.JPG');
+  }
+  .spades-j {
+    background-image: url('../images/Spades\ J.JPG');
+  }
+  .spades-q {
+    background-image: url('../images/Spades\ Q.JPG');
+  }
+  .spades-k {
+    background-image: url('../images/Spades\ K.JPG');
+  }
+  .spades-a {
+    background-image: url('../images/Spades\ A.JPG');
+  }

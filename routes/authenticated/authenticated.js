@@ -25,9 +25,9 @@ router.get("/lobby", (request, response, next) => {
     response.redirect("/");
   }
 
-  router.post("/chatMessage", (req, res) => {
-    let username = req.user.username;
-    let { msg } = req.body;
+  router.post("/chatMessage", (request, response) => {
+    let username = request.user.username;
+    let { msg } = request.body;
 
     pusher.trigger("lobby", "chat-msg", {
       message: msg,
@@ -35,7 +35,7 @@ router.get("/lobby", (request, response, next) => {
       timestamp: moment().format("h:mm a"),
     });
 
-    res.status(200).json({ msg: "test  pusher" });
+    response.status(200).json({ msg: "test  pusher" });
   });
 });
 module.exports = router;
