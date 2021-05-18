@@ -12,8 +12,6 @@ class ActiveRecord {
     return db.oneOrNone(`SELECT * FROM ${table_name} WHERE id=$[id]`, {id:0});
   }
 
-  selectAttribute() {
-  }
 }
 
 module.exports = ActiveRecord;
