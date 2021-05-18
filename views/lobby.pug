@@ -9,12 +9,17 @@ block content
         input(type='submit' name='logout' value='Logout')
         div(id='chat-box')
 
-    form(id='chat-form')
-        label(for='chatTextInput') Message:
-        input(type='text' name='chatTextInput' id='msg' 
-        placeholder='type message')
-        input(type='submit' style='display: none')
+    div.lobby-chat
+        form(id='chat-form')
+            label(for='chatTextInput') Message:
+            input(type='text' name='chatTextInput' id='msg' 
+            placeholder='type message')
+            input(type='submit' style='display: none')
 
-        // ======== Imported Libraries ==========
-        script(src='https://js.pusher.com/7.0/pusher.min.js')
-        script(type='module' src='/js/lobby.js')
+            // ======== Imported Libraries ==========
+            script(src='https://js.pusher.com/7.0/pusher.min.js')
+            script(type='module' src='/js/lobby.js')
+
+    //- create game lobby
+
+    //- find open game lobbies

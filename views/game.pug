@@ -1,8 +1,10 @@
 doctype html
 html
   head
-    title Register
+    title Game Lobby
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/game.css')
+    link(rel='stylesheet', href='/stylesheets/cards.css')
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
@@ -10,34 +12,97 @@ html
 
 
   body
-      //- need to fetch game session url
+      //- need to fetch game session url for ending game
+      
 
-  div#table
-    //- implement deck & other card related things here
+    div#table.table
+      //- implement deck & other card and game board related things here
+      div#player1.player
+        div.holecards
+          div.card.holecard1
+          div.card.holecard2
 
-    //- hand strength guide; need to make a separate menu for this
-    h4 Hand Strengths 
-    p Royal Flush 
-    p Straight Flush 
-    p Four of a Kind 
-    p Full House
-    p Flush 
-    p Straight 
-    p Three of a Kind 
-    p Two Pair 
-    p Pair 
-    p High Card
+        div.player-info
+          div.username #{username}
+          div.chips
 
-  
-  div#actions
-    //- call/bet, raise, fold, check
-    button(id='call/bet') Call / Bet
-    button(id='raise') Raise 
-    button(id='fold') Fold 
-    button(id='check') Check
+      div#player2.player
+        div.holecards
+          div.card.holecard1
+          div.card.holecard2
+
+        div.player-info
+          div.username #{username}
+          div.chips
+
+      div#player3.player
+        div.holecards
+          div.card.holecard1
+          div.card.holecard2
+
+        div.player-info
+          div.username #{username}
+          div.chips
+
+      div#player4.player
+        div.holecards
+          div.card.holecard1
+          div.card.holecard2
+
+        div.player-info
+          div.username #{username}
+          div.chips
+
+      div#player5.player
+        div.holecards
+          div.card.holecard1
+          div.card.holecard2
+
+        div.player-info
+          div.username #{username}
+          div.chips
+
+      div#player6.player
+        div.holecards
+          div.card.holecard1
+          div.card.holecard2
+
+        div.player-info
+          div.username #{username}
+          div.chips
+
+      
+
+      div#board
+        div#flop1.card.boardcard
 
 
-  div#chat
-    //- in-game chat, exit game
-    
+
+
+      //- hand strength guide; need to make a separate menu/modal for this
+      //- h4 Hand Strengths 
+      //- p from highest to lowest strength:
+      //- p 1. Royal Flush 
+      //- p 2. Straight Flush 
+      //- p 3. Four of a Kind 
+      //- p 4. Full House
+      //- p 5. Flush 
+      //- p 6. Straight 
+      //- p 7. Three of a Kind 
+      //- p 8. Two Pair 
+      //- p 9. Pair 
+      //- p 10. High Card
+
+
+    div#actions
+      //- call/bet, raise, fold, check
+      button(id='call/bet') Call / Bet
+      button(id='raise') Raise 
+      button(id='fold') Fold 
+      button(id='check') Check
+
+
+    div#chat
+      //- in-game chat, exit game
+        
 
