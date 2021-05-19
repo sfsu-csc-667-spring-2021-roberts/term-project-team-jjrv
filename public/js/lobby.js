@@ -1,15 +1,12 @@
-/* ====================================*/
-/* ============ pusher ================*/
-/* ====================================*/
-// Enable pusher logging - don't include this in production
-//Pusher.logToConsole = true;
-
+// pusher configuration 
+//creating a new instance 
 let pusher = new Pusher("9b6ab1d354f0296f318e", {
   cluster: "us3",
 });
 let channel = pusher.subscribe("lobby");
 
-/* ======= Chat Room ======== */
+// chat room fucntionality 
+// binds new user's to a channel 
 channel.bind("chat-msg", function (data) {
   let { username, message, timestamp } = data;
 
@@ -21,7 +18,7 @@ channel.bind("chat-msg", function (data) {
     <strong>${username}:</strong> ${message}</p>`;
   chatBox.append(div);
 
-  // scrolldown automatically
+  // automatic scrolling once the threshold has been met 
   chatBox.scrollTop = chatBox.scrollHeight;
 });
 
@@ -42,9 +39,8 @@ chatForm.addEventListener("submit", async (e) => {
 
   response = await response.json();
 
-  // Clear text input field for user
+
   e.target.elements.msg.value = "";
   e.target.elements.msg.focus();
 });
 
-/* ============ Buttons ================ */

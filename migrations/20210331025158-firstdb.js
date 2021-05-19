@@ -1,6 +1,6 @@
 
 "use strict";
-
+// all database tables are created using this file
 module.exports = {
   up: async (sequelize, DataTypes) => {
     

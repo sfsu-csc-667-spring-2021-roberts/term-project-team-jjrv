@@ -60,7 +60,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-
+// routing 
 app.use("/", indexRouter, unauthenticatedRouter);
 app.use("/test", testRouter);
 app.use("/testuser", usertestRouter);

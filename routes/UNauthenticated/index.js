@@ -5,9 +5,11 @@ const Chat = require('../../db').Chat;
 router.get('/', function(request, response, next) {
   response.render('index.pug');
 });
+// get how to play route
 router.get("/HowToPlay",function(request, response, next){
   response.render('HowToPlay.pug');
 });
+// get about route 
 router.get("/about", function (request, response, next){
   response.render('about.pug');
 });

@@ -3,6 +3,7 @@ const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcrypt');
 const Users = require('../db').Users;
 
+// authenticaiton files 
 const authenticateUser = (username, password, done) => {
   console.log('authenticateUser', { username, password, done });
 
@@ -22,13 +23,13 @@ const authenticateUser = (username, password, done) => {
 };
 
 passport.use(new LocalStrategy({ usernameField: 'username' }, authenticateUser));
-
+// serializing user sessions 
 passport.serializeUser(( user, done) => {
   return done(null, user.user_id);
 });
 
 
-
+//deserializing user
 passport.deserializeUser((user_id, done) => {
   Users.findById(user_id)
     .then((user) => {

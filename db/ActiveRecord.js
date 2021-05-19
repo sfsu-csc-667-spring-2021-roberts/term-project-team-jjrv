@@ -1,5 +1,9 @@
 let db = require('./connection');
 
+
+
+
+// basic activation records for choosing tables and finding fields within tables 
 class ActiveRecord {
   table_name = '';
   fields = {};
